@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/malomalo/ruby-ejs.git
+  revision: 22c3c8a22a792db96c1b99c397f9a60ce477933a
+  specs:
+    ejs (1.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -98,6 +104,8 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  ejs!
+  execjs
   jekyll (= 2.5.3)
   jekyll-assets (= 1.0.0)
   sass

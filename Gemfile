@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem "ejs", :github => "malomalo/ruby-ejs"
 gem 'execjs'
 gem "sass"
 gem "sprockets-sass"

@@ -24,10 +24,3 @@ module Jekyll
   end
   
 end
-
-__END__
-Jekyll::Hooks.register :page, :post_init do |page|
-  if page.name.end_with?('.mdown')
-   page.data['title'] = page.basename.split('-').map(&:capitalize).join(' ')
-  end
-end

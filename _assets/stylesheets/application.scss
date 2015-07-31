@@ -28,6 +28,26 @@ header {
   vertical-align:middle;
 }
 
+.autocomplete-container {
+  width: 100%;
+  position: absolute;
+  box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3);
+}
+
+.autocomplete {
+  position: relative;
+  
+  > ul {
+    padding: 0;
+    margin: 5px 0 5px 0;
+    list-style: none;
+    
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 header .title {
   display: inline-block;
   margin-right:10px;
@@ -38,6 +58,7 @@ header .search {
   vertical-align: middle;
   width: 70%;
   max-width: 500px;
+  
 }
 
 
@@ -71,9 +92,8 @@ header input[type="search"] {
   background: white;
 
   
-  /*&:focus {
+  &:focus {
     outline: none;
-    border: 1px solid $light-green;
+    border-bottom: 1px solid #94d31b;
   }
-*/
 }
