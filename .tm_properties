@@ -1,0 +1,1 @@
+exclude = '{$exclude,*.mdown,.tm_properties}'

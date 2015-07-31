@@ -1,0 +1,9 @@
+<% 
+  lunr = File.expand_path('../../../_lib/javascripts/lunr.js', __FILE__)
+  context = ExecJS.compile(File.read(lunr))
+%>
+<%= context.eval "lunr(function () {
+    this.field('title', {boost: 10})
+    this.field('body')
+    this.ref('id')
+  })" %>

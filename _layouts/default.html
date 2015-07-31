@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>{% if page.title %}{{ page.title | strip_newlines }}{% else %}{{ site.title | strip_newlines }}{% endif %}</title>
+        <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description  | strip_newlines }}{% endif %}">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+        {% stylesheet application  %}
+        {% javascript application async %}
+    </head>
+
+    <body>
+
+        <div class="header-container">
+        <header>
+            <span class="title">
+                Recipes
+            </span>
+
+            <div class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><path d="M23 36c-7.2 0-13-5.8-13-13s5.8-13 13-13 13 5.8 13 13-5.8 13-13 13zm0-24c-6.1 0-11 4.9-11 11s4.9 11 11 11 11-4.9 11-11-4.9-11-11-11z"/><path d="M32.682 31.267l8.98 8.98-1.414 1.414-8.98-8.98z"/></svg>
+                <input type="search">
+            </div>
+        </header>
+        </div>
+        
+        <main>
+            {{ content }}
+        </main>
+        
+        <footer>
+        </footer>
+        
+    </body>
+
+</html>
+
+

@@ -1,0 +1,79 @@
+@import "normalize";
+@import "bourbon";
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.header-container {
+  width: 100%;
+  height: 41px;
+  background-color: #F3F6F8;
+  border-bottom: 1px solid #e5e9ec;
+}
+
+header {
+  max-width: 980px;
+  padding: 0 20px;
+  margin: 0 auto;
+  height: 40px;
+  vertical-align:middle;
+}
+
+header .title {
+  display: inline-block;
+  margin-right:10px;
+}
+
+header .search {
+  display: inline-block;
+  vertical-align: middle;
+  width: 70%;
+  max-width: 500px;
+}
+
+
+header svg {
+  float:left;
+  fill: #94d31b;
+  
+  vertical-align: middle;
+  height: 40px;
+  padding: 5px 0 5px 0;
+  border-left: 1px solid #e5e9ec;
+  background: white;
+}
+
+
+header input[type="search"] {
+  display: inline-block;
+  
+  height: 40px;
+  width: calc(100% - 31px);
+  margin-left: 100px;
+  margin: 0;  
+  padding: 6px 8px;
+  border-top: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 1px solid #e5e9ec;
+  border-radius: 0px;
+
+
+  background: white;
+
+  
+  /*&:focus {
+    outline: none;
+    border: 1px solid $light-green;
+  }
+*/
+}
