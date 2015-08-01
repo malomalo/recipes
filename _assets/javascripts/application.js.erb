@@ -79,7 +79,7 @@ ready(function () {
                 
                 autocompleteView = document.createElement('div');
                 autocompleteView.className = 'autocomplete-container';
-                autocompleteView.style.top = box.top + box.height + 'px';
+                autocompleteView.style.top = box.top + 1 + box.height + 'px';
                 autocompleteView.innerHTML = render('autocomplete', {results: results});
                 autocompleteView.children[0].style.left = box.left + 'px';
                 autocompleteView.children[0].style.width = box.width + 'px';

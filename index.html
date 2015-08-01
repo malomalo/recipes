@@ -1,3 +1,15 @@
 ---
 layout: default
 ---
+
+<h1>Recipes</h1>
+
+<h2>A Collection of Recipes from the Bracy family and friends.</h2>
+
+{% for page in site.pages %}
+
+    {% if page.recipe %}
+        <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
+    {% endif %}
+    
+{% endfor %}	

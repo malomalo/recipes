@@ -18,9 +18,16 @@ module Jekyll
       if name.end_with?('.mdown')
         @data ||= {}
         @data['title'] = basename.split('-').map(&:capitalize).join(' ')
+        @data['recipe'] = true
       end
       @data
+    end
+    
+    def recipe
+      !!@data['recipe']
     end
   end
   
 end
+
+Jekyll::Page::ATTRIBUTES_FOR_LIQUID << 'recipe'
