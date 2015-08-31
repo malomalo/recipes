@@ -14,10 +14,14 @@ module Jekyll
   end
   
   class Page
+    
+    attr_accessor :main
+    
     def data
       if name.end_with?('.mdown')
         @data ||= {}
         @data['title'] = basename.split('-').map(&:capitalize).join(' ')
+        @data['layout'] = 'recipe'
         @data['recipe'] = true
       end
       @data
@@ -30,4 +34,4 @@ module Jekyll
   
 end
 
-Jekyll::Page::ATTRIBUTES_FOR_LIQUID << 'recipe'
+Jekyll::Page::ATTRIBUTES_FOR_LIQUID << 'recipe' << 'main'
